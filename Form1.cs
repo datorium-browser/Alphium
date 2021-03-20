@@ -106,9 +106,17 @@ namespace AlphiumBrowser
         private void ButtonRemoveTab_Click(object sender, EventArgs e)
         {
             var tp = BrowserTabs.TabPages[BrowserTabs.TabPages.Count - 1];
-            BrowserTabs.TabPages.Remove(tp);
-            tp.Controls.Remove(chromeBrowser);
-        }
+            var mtp = BrowserTabs.TabCount;
+            if (mtp != 1)
+			{
+				BrowserTabs.TabPages.Remove(tp);
+				tp.Controls.Remove(chromeBrowser);
+			}
+			else
+			{
+                this.Close();
+            }
+		}
         private void AddressBar_Click(object sender, EventArgs e)
         {
 
