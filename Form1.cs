@@ -12,13 +12,14 @@ using CefSharp.WinForms;
 
 namespace AlphiumBrowser
 {
-    public partial class Form1 : Form
+    public partial class AlphiumBrowser : Form
     {
+        public ChromiumWebBrowser currentBrowser = null;
         public ChromiumWebBrowser chromeBrowser = null;
         private string initialURL = "https://datorium.eu";
         public string WebTitle;
 
-        public Form1()
+        public AlphiumBrowser()
         {
             InitializeComponent();
             InitializeChromium();
@@ -60,7 +61,6 @@ namespace AlphiumBrowser
         {
             string googleURL = $"https://www.google.com/search?q=";
             string addressBarUrl = AddressBar.Text;
-            ChromiumWebBrowser currentBrowser = null;
 
             currentBrowser = (ChromiumWebBrowser)BrowserTabs.SelectedTab.Controls[0];
 
@@ -132,6 +132,9 @@ namespace AlphiumBrowser
                 ButtonGo.ForeColor = Color.WhiteSmoke;
                 ButtonRemoveTab.ForeColor = Color.WhiteSmoke;
                 ButtonChangeTheme.ForeColor = Color.WhiteSmoke;
+                ButtonBackward.ForeColor = Color.WhiteSmoke;
+                ButtonForward.ForeColor = Color.WhiteSmoke;
+                ButtonReload.ForeColor = Color.WhiteSmoke;
                 AddressBar.BackColor = Color.DarkSlateBlue;
                 AddressBar.ForeColor = Color.White;
             }
@@ -143,24 +146,31 @@ namespace AlphiumBrowser
                 ButtonGo.ForeColor = Color.Black;
                 ButtonRemoveTab.ForeColor = Color.Black;
                 ButtonChangeTheme.ForeColor = Color.Black;
+                ButtonBackward.ForeColor = Color.Black;
+                ButtonForward.ForeColor = Color.Black;
+                ButtonReload.ForeColor = Color.Black;
                 AddressBar.BackColor = Color.White;
                 AddressBar.ForeColor = Color.Black;
             }
 		}
 
-		//TASK:
-		//1. Make sure that we can navigate with address bar in any tab
-		//2. Add Remove button, which will remove the last tab
+		private void ButtonBackward_Click(object sender, EventArgs e)
+		{
+            currentBrowser = (ChromiumWebBrowser)BrowserTabs.SelectedTab.Controls[0];
+            currentBrowser.Back();
+        }
 
+		private void ButtonForward_Click(object sender, EventArgs e)
+        {
+            currentBrowser = (ChromiumWebBrowser)BrowserTabs.SelectedTab.Controls[0];
+            currentBrowser.Forward();
+        }
 
-
-
-		//Homework for Feb 25, 2021
-		//1. Add Back and Forward buttons, make sure that they work
-		//2. Add Reload button
-		//3. Check, if adress does not start with http/www, then request a Google search
-		//4. Make sure that when you press enter in the Address Bar, the browser vists your URL
-		//5. Your own feature
+		private void ButtonReload_Click(object sender, EventArgs e)
+		{
+            currentBrowser = (ChromiumWebBrowser)BrowserTabs.SelectedTab.Controls[0];
+            currentBrowser.Reload();
+        }
 	}
 }
 
