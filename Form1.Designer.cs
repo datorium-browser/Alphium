@@ -37,6 +37,7 @@
 			this.BrowserTabs = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.ButtonChangeTheme = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.BrowserTabs.SuspendLayout();
 			this.SuspendLayout();
@@ -45,10 +46,11 @@
 			// 
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.ButtonGo,
-			this.AddressBar,
-			this.ButtonAddTab,
-			this.ButtonRemoveTab});
+            this.ButtonGo,
+            this.AddressBar,
+            this.ButtonAddTab,
+            this.ButtonRemoveTab,
+            this.ButtonChangeTheme});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(600, 39);
@@ -102,7 +104,7 @@
 			this.BrowserTabs.Controls.Add(this.tabPage2);
 			this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.BrowserTabs.Location = new System.Drawing.Point(0, 39);
-			this.BrowserTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.BrowserTabs.Margin = new System.Windows.Forms.Padding(2);
 			this.BrowserTabs.Name = "BrowserTabs";
 			this.BrowserTabs.SelectedIndex = 0;
 			this.BrowserTabs.Size = new System.Drawing.Size(600, 327);
@@ -111,9 +113,9 @@
 			// tabPage1
 			// 
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
 			this.tabPage1.Size = new System.Drawing.Size(592, 301);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "tabPage1";
@@ -122,23 +124,34 @@
 			// tabPage2
 			// 
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
 			this.tabPage2.Size = new System.Drawing.Size(592, 301);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "tabPage2";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// Browser
+			// ButtonChangeTheme
+			// 
+			this.ButtonChangeTheme.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.ButtonChangeTheme.Font = new System.Drawing.Font("Segoe UI", 18F);
+			this.ButtonChangeTheme.Image = ((System.Drawing.Image)(resources.GetObject("ButtonChangeTheme.Image")));
+			this.ButtonChangeTheme.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ButtonChangeTheme.Name = "ButtonChangeTheme";
+			this.ButtonChangeTheme.Size = new System.Drawing.Size(52, 36);
+			this.ButtonChangeTheme.Text = "🎨";
+			this.ButtonChangeTheme.Click += new System.EventHandler(this.ButtonChangeTheme_Click);
+			// 
+			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(600, 366);
 			this.Controls.Add(this.BrowserTabs);
 			this.Controls.Add(this.toolStrip1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.Name = "Browser";
+			this.Margin = new System.Windows.Forms.Padding(2);
+			this.Name = "Form1";
 			this.Text = "Form1";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_FormClosing);
 			this.toolStrip1.ResumeLayout(false);
@@ -159,6 +172,7 @@
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.ToolStripButton ButtonAddTab;
 		private System.Windows.Forms.ToolStripButton ButtonRemoveTab;
+		private System.Windows.Forms.ToolStripButton ButtonChangeTheme;
 	}
 }
 
