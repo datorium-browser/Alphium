@@ -122,6 +122,32 @@ namespace AlphiumBrowser
 
         }
 
+		private void ButtonChangeTheme_Click(object sender, EventArgs e)
+		{
+            if (this.BackColor != Color.Black)
+            {
+                this.BackColor = Color.Black;
+                toolStrip1.BackColor = Color.Black;
+                ButtonAddTab.ForeColor = Color.WhiteSmoke;
+                ButtonGo.ForeColor = Color.WhiteSmoke;
+                ButtonRemoveTab.ForeColor = Color.WhiteSmoke;
+                ButtonChangeTheme.ForeColor = Color.WhiteSmoke;
+                AddressBar.BackColor = Color.DarkSlateBlue;
+                AddressBar.ForeColor = Color.White;
+            }
+            else 
+            {
+                this.BackColor = Color.WhiteSmoke;
+                toolStrip1.BackColor = Color.WhiteSmoke;
+                ButtonAddTab.ForeColor = Color.Black;
+                ButtonGo.ForeColor = Color.Black;
+                ButtonRemoveTab.ForeColor = Color.Black;
+                ButtonChangeTheme.ForeColor = Color.Black;
+                AddressBar.BackColor = Color.White;
+                AddressBar.ForeColor = Color.Black;
+            }
+		}
+
 		//TASK:
 		//1. Make sure that we can navigate with address bar in any tab
 		//2. Add Remove button, which will remove the last tab
