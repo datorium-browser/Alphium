@@ -135,7 +135,7 @@ namespace AlphiumBrowser
                 ButtonBackward.ForeColor = Color.WhiteSmoke;
                 ButtonForward.ForeColor = Color.WhiteSmoke;
                 ButtonReload.ForeColor = Color.WhiteSmoke;
-                AddressBar.BackColor = Color.DarkSlateBlue;
+                AddressBar.BackColor = Color.DarkOrange;
                 AddressBar.ForeColor = Color.White;
             }
             else 
