@@ -30,14 +30,14 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlphiumBrowser));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.ButtonGo = new System.Windows.Forms.ToolStripButton();
-			this.AddressBar = new System.Windows.Forms.ToolStripTextBox();
-			this.ButtonAddTab = new System.Windows.Forms.ToolStripButton();
-			this.ButtonRemoveTab = new System.Windows.Forms.ToolStripButton();
-			this.ButtonChangeTheme = new System.Windows.Forms.ToolStripButton();
 			this.ButtonBackward = new System.Windows.Forms.ToolStripButton();
 			this.ButtonForward = new System.Windows.Forms.ToolStripButton();
 			this.ButtonReload = new System.Windows.Forms.ToolStripButton();
+			this.AddressBar = new System.Windows.Forms.ToolStripTextBox();
+			this.ButtonGo = new System.Windows.Forms.ToolStripButton();
+			this.ButtonAddTab = new System.Windows.Forms.ToolStripButton();
+			this.ButtonRemoveTab = new System.Windows.Forms.ToolStripButton();
+			this.ButtonChangeTheme = new System.Windows.Forms.ToolStripButton();
 			this.BrowserTabs = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -62,58 +62,6 @@
 			this.toolStrip1.Size = new System.Drawing.Size(600, 39);
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
-			// 
-			// ButtonGo
-			// 
-			this.ButtonGo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.ButtonGo.Font = new System.Drawing.Font("Segoe UI", 18F);
-			this.ButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("ButtonGo.Image")));
-			this.ButtonGo.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ButtonGo.Name = "ButtonGo";
-			this.ButtonGo.Size = new System.Drawing.Size(37, 36);
-			this.ButtonGo.Text = "⌕";
-			this.ButtonGo.Click += new System.EventHandler(this.ButtonGo_Click);
-			// 
-			// AddressBar
-			// 
-			this.AddressBar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddressBar.Name = "AddressBar";
-			this.AddressBar.Size = new System.Drawing.Size(301, 39);
-			this.AddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBar_KeyDown);
-			this.AddressBar.Click += new System.EventHandler(this.AddressBar_Click);
-			// 
-			// ButtonAddTab
-			// 
-			this.ButtonAddTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.ButtonAddTab.Font = new System.Drawing.Font("Segoe UI", 18F);
-			this.ButtonAddTab.Image = ((System.Drawing.Image)(resources.GetObject("ButtonAddTab.Image")));
-			this.ButtonAddTab.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ButtonAddTab.Name = "ButtonAddTab";
-			this.ButtonAddTab.Size = new System.Drawing.Size(35, 36);
-			this.ButtonAddTab.Text = "+";
-			this.ButtonAddTab.Click += new System.EventHandler(this.ButtonAddTab_Click);
-			// 
-			// ButtonRemoveTab
-			// 
-			this.ButtonRemoveTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.ButtonRemoveTab.Font = new System.Drawing.Font("Segoe UI", 18F);
-			this.ButtonRemoveTab.Image = ((System.Drawing.Image)(resources.GetObject("ButtonRemoveTab.Image")));
-			this.ButtonRemoveTab.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ButtonRemoveTab.Name = "ButtonRemoveTab";
-			this.ButtonRemoveTab.Size = new System.Drawing.Size(29, 36);
-			this.ButtonRemoveTab.Text = "-";
-			this.ButtonRemoveTab.Click += new System.EventHandler(this.ButtonRemoveTab_Click);
-			// 
-			// ButtonChangeTheme
-			// 
-			this.ButtonChangeTheme.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.ButtonChangeTheme.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.ButtonChangeTheme.Image = ((System.Drawing.Image)(resources.GetObject("ButtonChangeTheme.Image")));
-			this.ButtonChangeTheme.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ButtonChangeTheme.Name = "ButtonChangeTheme";
-			this.ButtonChangeTheme.Size = new System.Drawing.Size(46, 36);
-			this.ButtonChangeTheme.Text = "🎨";
-			this.ButtonChangeTheme.Click += new System.EventHandler(this.ButtonChangeTheme_Click);
 			// 
 			// ButtonBackward
 			// 
@@ -147,6 +95,58 @@
 			this.ButtonReload.Size = new System.Drawing.Size(39, 36);
 			this.ButtonReload.Text = "↻";
 			this.ButtonReload.Click += new System.EventHandler(this.ButtonReload_Click);
+			// 
+			// AddressBar
+			// 
+			this.AddressBar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.AddressBar.Name = "AddressBar";
+			this.AddressBar.Size = new System.Drawing.Size(301, 39);
+			this.AddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBar_KeyDown);
+			this.AddressBar.Click += new System.EventHandler(this.AddressBar_Click);
+			// 
+			// ButtonGo
+			// 
+			this.ButtonGo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.ButtonGo.Font = new System.Drawing.Font("Segoe UI", 18F);
+			this.ButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("ButtonGo.Image")));
+			this.ButtonGo.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ButtonGo.Name = "ButtonGo";
+			this.ButtonGo.Size = new System.Drawing.Size(37, 36);
+			this.ButtonGo.Text = "⌕";
+			this.ButtonGo.Click += new System.EventHandler(this.ButtonGo_Click);
+			// 
+			// ButtonAddTab
+			// 
+			this.ButtonAddTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.ButtonAddTab.Font = new System.Drawing.Font("Segoe UI", 18F);
+			this.ButtonAddTab.Image = ((System.Drawing.Image)(resources.GetObject("ButtonAddTab.Image")));
+			this.ButtonAddTab.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ButtonAddTab.Name = "ButtonAddTab";
+			this.ButtonAddTab.Size = new System.Drawing.Size(35, 36);
+			this.ButtonAddTab.Text = "+";
+			this.ButtonAddTab.Click += new System.EventHandler(this.ButtonAddTab_Click);
+			// 
+			// ButtonRemoveTab
+			// 
+			this.ButtonRemoveTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.ButtonRemoveTab.Font = new System.Drawing.Font("Segoe UI", 18F);
+			this.ButtonRemoveTab.Image = ((System.Drawing.Image)(resources.GetObject("ButtonRemoveTab.Image")));
+			this.ButtonRemoveTab.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ButtonRemoveTab.Name = "ButtonRemoveTab";
+			this.ButtonRemoveTab.Size = new System.Drawing.Size(29, 36);
+			this.ButtonRemoveTab.Text = "-";
+			this.ButtonRemoveTab.Click += new System.EventHandler(this.ButtonRemoveTab_Click);
+			// 
+			// ButtonChangeTheme
+			// 
+			this.ButtonChangeTheme.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.ButtonChangeTheme.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.ButtonChangeTheme.Image = ((System.Drawing.Image)(resources.GetObject("ButtonChangeTheme.Image")));
+			this.ButtonChangeTheme.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ButtonChangeTheme.Name = "ButtonChangeTheme";
+			this.ButtonChangeTheme.Size = new System.Drawing.Size(46, 36);
+			this.ButtonChangeTheme.Text = "🎨";
+			this.ButtonChangeTheme.Click += new System.EventHandler(this.ButtonChangeTheme_Click);
 			// 
 			// BrowserTabs
 			// 
@@ -189,6 +189,7 @@
 			this.ClientSize = new System.Drawing.Size(600, 366);
 			this.Controls.Add(this.BrowserTabs);
 			this.Controls.Add(this.toolStrip1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "AlphiumBrowser";
 			this.Text = "AlphiumBrowser";
